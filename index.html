@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Modelos de clasificación </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Introduccion</a></li>
+							<li><a href="#one">Modelos</a></li>
+							<li><a href="#two">analisis</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Modelos de clasificacion</h1>
+							<p>A continuacion vera modelos de clasificacion y un analisis de una red neuronal <br />
+							<b>Nuestro equipo:</b><br />	
+							°Sebastián Sabogal <br />
+							°Samuel Ariza <br />
+							°Miguel Velazco <br />
+							°Juan Wilches <br />
+							°Mateo Vanegas <br /></p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Empezar</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Modelo de sonido</h2>
+									<p>Se mostrarán tres tipos de sonido y se mostrará a que corresponden según el audio</p>
+									<ul class="actions">
+										<li><a href="sonido.html" class="button">Entrar</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Modelo de imagenes</h2>
+									<p> Se reconocerán tres categorías de imagenes, y se clasficarán las imagenes según corespondan</p>
+									<ul class="actions">
+										<li><a href="imagenes.html" class="button">Entrar</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Modelo de posturas</h2>
+									<p>Se reconocerán tres posturas especificas</p>
+									<ul class="actions">
+										<li><a href="pose.html" class="button">Entrar</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Red Neuronal</h2>
+							<p><b>Visualización de pesos MLP(Perseptrón multicapa) en dataset MNIST</b><br/>
+							La red neuronal muestra según su comportamiento la manera de su aprendizaje, Puedes hacerte una idea de su comportamiento estudiando los coeficientes obtenidos de la red neuronal. Por ejemplo, si los pesos parecen desestructurados, algunos no se usan o la tasa es muy alta, la regularidad puede ser demasiado baja o la tasa de aprendizaje puede ser demasiado alta.<br/><br/>
+							Este ejemplo muestra cómo trazar algunos pesos de primera clase en un MLPClassifier entrenado en el conjunto de datos MNIST.<br/><br/>
+							Los datos ingresados o los datos de entrada radican en dígitos que son elaborados a mano de 28 X 28 pixeles, donde muestran 784 características del conjunto de datos, por lo cual, la tabla de pesos en la primera capa podemos visualizarla asi (784, hidden_layer_sizes[0]). Entonces se puede observar que la columna de la tabla de peso tiene una imagen de 28 X 28 pixeles.<br/><br/>
+							Este ejemplo puede ser completado de manera más rápida, lo que se debe realizar es entrenar con pocas unidades ocultas y elaborarlo en un tiempo corto, el entrenamiento de estiramiento puede ayudar a la reducción de pesos libres. Este ejemplo muestra una advertencia porque no converge. En este caso es necesario debido a que se tiene un límite en los recursos ante la infraestructura de integración continua que es usada para generar regularmente este documento.<br/><br/>
+							<b>Algoritmo:</b><br/><br/>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/pic05.jpg" alt="" data-position="center center" /></a>
+							<br/><br/>
+							<b>Visualización red neuronal en 28x28 pixeles y perdida de pesos</b><br/><br/>
+							<a href="#" class="image"><img src="images/pic06.jpg" alt="" data-position="center center" /></a>
+							<br/><br/>
+							<b>Librerías usadas</b><br/><br/>
+							<a href="#" class="image"><img src="images/pic07.jpg" alt="" data-position="center center" /></a>
+							<br/><br/>
+							<b>Warmings</b><br/><br/>
+							<a href="#" class="image"><img src="images/pic08.jpg" alt="" data-position="center center" /></a>
+							Su uso en la red neuronal es, si se manda una advertencia ante el uso limitado de recursos se ignorará según el clasificador de mlp.<br/><br/>
+							<b>Mathplotlib</b><br/>
+							Su uso en la red neuronal es el poder graficar según los datos contenidos en listas<br/><br/>
+							<b>Las librerías sklearn.datasets</b><br/>
+							Es una biblioteca de código abierto del aprendizaje automatico donde importamos :<br/><br/>
+							°Fetch_openml:<br/>
+								Obtiene un conjunto de datos desde openml según nombre o id del cojunto, los conjuntos de datos tienen una forma única de id de numero entero o una combinación de nombre y versión.<br/><br/>
+							°Convergencewarning:<br/>
+								Es una advertencia personalizada donde captura los problemas de convergencia del modelo.<br/><br/>
+							°Mlpclassifier:<br/>
+								Ofrece una capa oculta con 100 neuronas para una red neuronal junto a una tasa de aprendizaje.<br/><br/>
+							°Train test Split:<br/>
+							Nos permite dividir en dos bloques un dataset, donde uno es destinado al entrenamiento y validación de un modelo y el otro bloque se destina a las pruebas del modelo.<br/><br/>
+							</p>
+							<div class="features">
+							</div>
+						</div>
+					</section>
+
+				
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Modelos de clasificacion</li><li>Introducción a IA</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
